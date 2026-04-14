@@ -1,0 +1,35 @@
+{
+  "name": "rocketchat-version-indexer",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "setup": "tsx src/cli/setup.ts",
+    "start": "tsx src/index.ts",
+    "reindex": "tsx src/cli/reindex.ts",
+    "dev": "tsx watch src/index.ts",
+    "test": "vitest run",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
+  },
+  "license": "ISC",
+  "description": "Indexes Rocket.Chat codebase across versions for API endpoint lookup and version comparison",
+  "dependencies": {
+    "@hono/node-server": "^1.19.14",
+    "better-sqlite3": "^12.9.0",
+    "diff": "^9.0.0",
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "^0.45.2",
+    "hono": "^4.12.12",
+    "semver": "^7.7.4",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/diff": "^7.0.2",
+    "@types/node": "^25.6.0",
+    "drizzle-kit": "^0.31.10",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.4"
+  }
+}
