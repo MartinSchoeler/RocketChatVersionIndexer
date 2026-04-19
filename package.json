@@ -8,6 +8,7 @@
     "reindex": "tsx src/cli/reindex.ts",
     "dev": "tsx watch src/index.ts",
     "test": "vitest run",
+    "mcp": "tsx src/mcp.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate"
   },
@@ -15,6 +16,7 @@
   "description": "Indexes Rocket.Chat codebase across versions for API endpoint lookup and version comparison",
   "dependencies": {
     "@hono/node-server": "^1.19.14",
+    "@modelcontextprotocol/sdk": "^1.29.0",
     "better-sqlite3": "^12.9.0",
     "diff": "^9.0.0",
     "dotenv": "^17.4.2",
